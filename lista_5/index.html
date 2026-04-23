@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Média - DS</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Cálculo de Média</h2>
+
+    <label>Nota 1:</label>
+    <input type="number" id="nota1" placeholder="Ex: 7.5" step="0.1" min="0" max="10">
+    
+    <label>Nota 2:</label>
+    <input type="number" id="nota2" placeholder="Ex: 8.0" step="0.1" min="0" max="10">
+    <label>Nota 3 (Prova):</label>
+    <input type="number" id="nota3" placeholder="Ex: 9.0" step="0.1" min="0" max="10">
+    
+    <button onclick="calcularMedia()">Calcular Média</button>
+    
+    <div id="resultado"></div>
+</div>
+
+<script>
+    function calcularMedia() {
+        const nota1Input = document.getElementById('nota1');
+        const nota2Input = document.getElementById('nota2');
+        const nota3Input = document.getElementById('nota3');
+        const resultadoDiv = document.getElementById('resultado');
+        
+        const n1 = parseFloat(nota1Input.value);
+        const n2 = parseFloat(nota2Input.value);
+        const n3 = parseFloat(nota3Input.value);
+
+        if (nota1Input.value === '' || nota2Input.value === '' || nota3Input.value === '') {
+            resultadoDiv.innerText = "Por favor, preencha todas as notas.";
+            resultadoDiv.className = ''; 
+            return;
+        }
+
+        if (isNaN(n1) || isNaN(n2) || isNaN(n3)) {
+            resultadoDiv.innerText = "Digite apenas números válidos.";
+            resultadoDiv.className = '';
+            return;
+        }
+
+        if (n1 < 0 || n1 > 10 || n2 < 0 || n2 > 10 || n3 < 0 || n3 > 10) {
+            resultadoDiv.innerText = "As notas devem estar entre 0 e 10.";
+            resultadoDiv.className = '';
+            return;
+        }
+        const media = (n1 + n2 + n3) / 3;
+
+        let situacao = "";
+        let classeCor = "";
+
+        if (media >= 7) {
+            situacao = "Aprovado";
+            classeCor = "aprovado";
+        } else if (media >= 5) {
+            situacao = "Recuperação";
+            classeCor = "recuperacao";
+        } else {
+            situacao = "Reprovado";
+            classeCor = "reprovado";
+        }
+
+        resultadoDiv.innerHTML = `Média: ${media.toFixed(1)} <br> Situação: ${situacao}`;
+        resultadoDiv.className = classeCor;
+
+        nota1Input.value = '';
+        nota2Input.value = '';
+        nota3Input.value = '';
+    }
+</script>
+
+</body>
+</html>
