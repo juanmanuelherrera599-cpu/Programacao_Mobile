@@ -1,14 +1,14 @@
-#Programação Mobile
+# Programação Mobile
 
-#Sobre
+# Sobre
 
 Este repositório foi criado para armazenar e organizar todos os meus trabalhos, atividades e projetos desenvolvidos na disciplina de Programação Mobile.
 
-#Objetivo
+# Objetivo
 
 Reunir em um único lugar os trabalhos realizados durante as aulas, facilitando a organização dos códigos, projetos e atividades práticas de desenvolvimento mobile.
 
-#Conteúdo do Repositório
+# Conteúdo do Repositório
 
 - Trabalhos acadêmicos
 - Atividades práticas
@@ -17,7 +17,7 @@ Reunir em um único lugar os trabalhos realizados durante as aulas, facilitando 
 - Exercícios desenvolvidos em aula
 - Documentação dos projetos
 
-#Tecnologias e Ferramentas
+# Tecnologias e Ferramentas
 
 - JavaScript
 - React Native
@@ -25,14 +25,14 @@ Reunir em um único lugar os trabalhos realizados durante as aulas, facilitando 
 - Git
 - GitHub
 
-#Organização
+# Organização
 
 Os arquivos e projetos serão organizados em pastas, facilitando a identificação, a consulta e a manutenção dos trabalhos desenvolvidos.
 
-#Finalidade
+# Finalidade
 
 Este repositório tem finalidade acadêmica e será atualizado conforme novos trabalhos e atividades de Programação Mobile forem realizados.
 
-Autor
+# Autor
 
 Juan
